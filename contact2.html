@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Quote Request</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css">
+		<script>
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4) {
+          document.getElementById('ajax').innerHTML = xhr.responseText;
+        }
+      };
+    xhr.open('GET', 'sidebar.html');
+      function sendAJAX() {
+        xhr.send();
+        document.getElementById('load').style.display = "none";
+      }
+  </script>
+	</head>
+	<body>
+      <a href="index.html" class="radius button">Home</a>
+            <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+              <h2 id="firstModalTitle"></h2>
+	    
+	    
+		<form action="index.html" method="post">
+
+		
+
+	         <fieldset>
+				<legend><span class="number">1</span> Your Info</legend>
+				<!-- gives the separation and circle number with green/ [your basic info] -->
+
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="user_name">
+
+				<label for="mail">Email:</label>
+				<input type="email" id="mail" name="user_email">
+
+				<label for="phone">Telephone Number:</label>
+				<input type="tel" id="phone" name="user_tel" maxlength="12"
+
+			</fieldset>
+			
+				
+			<fieldset>
+				<legend><span class="number">2</span>Quote Request Items</legend>
+
+				<!-- this is for a menu selection option, when text entry is not optimum -->
+				<label for="time">Time Requested:</label>
+				<select id="time" name="user_job">
+					<optgroup label="Block Times">
+						<option value="time_morning">Morning</option>
+						<option value="time_afternoon">Afternoon</option>
+						<option value="time_evening">Evening</option>
+					</optgroup>
+					<optgroup label="Specific Time">
+						<option value="time_am">8 a.m. through 10 a.m.</option>
+						<option value="tiem_pm">1 p.m. through 3 p.m.</option>
+					</optgroup>
+				</select> 	
+
+				<!-- CHECKBOXES	 -->	
+				<label>Requested Day(s):</label>
+				<input type="checkbox" id="thursday" value"day__thursday" name="user_thursday"><label class="light" for="thursday">Thursday</label><br>
+				<input type="checkbox" id="friday" value"day_friday" name="user_friday"><label class="light" for="friday">Friday</label><br>
+				<input type="checkbox" id="saturday" value"day_saturday" name="user_saturday"><label class="light" for="saturday">Saturday</label>
+			</fieldset>
+			<fieldset>
+				<input type="checkbox" id="airport" value"airport_pickup" name="user_airport"><label class="light" for="airport">Airport Pickup?</label><br>
+			</fieldset>
+			<fieldset>
+				 <label for="number">Number In Party</label> 
+				 <input type="text" id="number" name="user_number">
+				
+			     <label for="name">Comments:</label>
+				<textarea id="comment" name="user_comment"> </textarea>
+			    
+			</fieldset>
+			 
+			<button type="submit">SUBMIT</button>
+
+		</form>
+	 
+	  
+	</body>
+</html>
