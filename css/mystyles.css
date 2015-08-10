@@ -14,10 +14,11 @@ header{
    
 }
 
-h4 {
+.h4 {
       /*padding: 15px 8px 0 0 ;*/
       font-size: 1.50rem; /* 90px/16px  */
       color: green;
+      font-family: 'Libre Baskerville', serif;
       /*text-align: right;*/
       text-transform: lower-alphacase;
       font-weight: normal;
@@ -53,6 +54,7 @@ body{
 
 .h2 {
     font-family: 'Lobster', cursive; 
+    font-size: 1.25rem;
 }
 
 a{
@@ -153,10 +155,6 @@ input:focus:invalid {
   border-radius: 20px 20px 20px 20px;
 }
 
-.slick{
-    padding-left: 60px;
-    
-}
 
 .info,
 .seats,
@@ -180,15 +178,17 @@ input:focus:invalid {
 .secondary-content {
 	padding-top: 30px;
 	}
-/*****************
-    TERMS
-******************/
-
+	
 .terms {
   margin-left: 46%;
   font-size: 1em; /* 20px/16px */
   line-height: 1.6;  
-}
+  font-family: 'Lora', serif;
+}	
+	
+/*****************
+    TERMS
+******************/
 
 .primary-content {
   text-align: center;
@@ -221,7 +221,7 @@ body {
 
 h1, h2,  h3, h4, h5, h6 {
   color: #222222;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: 'Lora', serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.4;
@@ -324,7 +324,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: 'Lora', serif;
   font-weight: normal;
   line-height: normal;
   /*margin: 0 0 1.25rem;*/
@@ -370,14 +370,7 @@ button, .button {
         margin: 0%;
     }
     
-    .flip-clock-wrapper{
-        right: 12.575px;
-        height: 100px;
-    }
-   .clock, .flip-clock-wrapper ul{
-      
-     width: 90%;
-   } 
+   
    .logo{
        margin-left: 0em;
    }
@@ -385,13 +378,22 @@ button, .button {
        
    }
    button, .button {
-       margin-left: 1em;
-}
+       margin-left: 5.5em;
+    }
     .terms {
-      margin-left:1em;
+      margin-left:6.5em;
       /* 20px/16px */
       line-height: 1.6;  
-}
+    }
+
+    .h {
+        margin-left:0;
+    }
+   
+      .primary-content{
+        text-align: left;
+    }
+
 }
 
 /* min-width 641px and max-width 1024px, tablet-only issues */
@@ -402,6 +404,10 @@ button, .button {
     .flex-video, iframe{
         width: 30em;
     } 
+    .h {
+       
+    }
+
 }
 
 /* min-width 1025px and max-width 1440px, large screen-only issues */
@@ -409,13 +415,58 @@ button, .button {
     .lead, h4 {
     text-align: right;
     }
+     .flip-clock-wrapper {
+          text-align: center;
+          position: relative;
+          /*width: 100%;*/
+          /*margin: 1em;*/
+        /*text-align: center;*/
+          /*position: relative;*/
+         height: 115px;
+         width: 450px;
+         margin-left: 8em;
+         /*border-right-width: 15px;*/
+         /*padding-right: 15px;*/
+         /*margin: 1em 10em 1em -2em;*/
+         /*margin-left: -2px;*/
+}
+  
+    
     .flex-video, iframe{
         width: 30em;
     } 
+    .terms {
+      text-align: left;
+      /* 20px/16px */
+      line-height: 1.6;  
+}
+
+    .contact{
+         margin-left: 12em;
+    }
+
+    .h2{
+        margin-left: 5em;
+    }
+    
 }
 
 /* min-width 1441px and max-width 1920px, xlarge screen-only issues */
 @media only screen and (min-width: 90.063em) and (max-width: 120em){
-    
+      h4 {
+    text-align: right;
+    }
+    .flex-video, iframe{
+        width: 30em;
+    } 
+    .terms {
+      margin-left:5.8em;
+      /* 20px/16px */
+      line-height: 1.6;  
+}
+.flip-clock-wrapper{
+        margin-left: 8em;
+        height: 100px;
+    }
 }
     
